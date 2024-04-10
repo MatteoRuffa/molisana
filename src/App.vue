@@ -1,6 +1,7 @@
 <template>
   <div>
     <h1>Ciao</h1>
+    <i class="fa fa-solid fa-home"></i>
   </div>
 </template>
 
