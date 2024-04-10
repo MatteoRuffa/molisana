@@ -1,16 +1,25 @@
 <template>
-  <div>
-    <h1>Ciao</h1>
-    <i class="fa fa-solid fa-home"></i>
-  </div>
+  <HeaderComponents />
+  <MainComponents />
+  <FooterComponents />
 </template>
 
 <script>
+import HeaderComponents from './components/HeaderComponents.vue';
+import MainComponents from './components/MainComponents.vue';
+import FooterComponents from './components/FooterComponents.vue';
   export default {
-    
+    name: 'App',
+    components: {
+      HeaderComponents,
+      MainComponents,
+      FooterComponents
+    }
   }
 </script>
 
 <style lang="scss" scoped>
-
+h1{
+  color: red;
+}
 </style>
