@@ -3,8 +3,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-4"><img src="../assets/img/la-molisana-logo.png" alt="logo"></div>
-                <MenuComponents title="Prodotti" :items="links.Prodotti"/>
-                <MenuComponents title="Pastificio" :items="links.Pastificio"/>
+                <MenuComponents v-for="(item, index) in menu" :key="index" :title="item.title" :items="item.links"/>
                 <!-- <div class="col-12 col-md-4">      PROVA SENZA FARE UN COMPONENTE
                     <h5>Prodotti</h5>
                     <ul>
@@ -25,49 +24,16 @@
 </template>
 
 <script>
-    import MenuComponents from './MenuComponents.vue'; 
+import { footerMenu } from '../data/store.js';
+import MenuComponents from './MenuComponents.vue'; 
     export default {
         name: 'FooterComponents',
+        components: {
+            MenuComponents
+        },
         data() {
             return {
-                links: {
-                    Prodotti: [
-                        {
-                        name: 'home',
-                        url: '#'
-                        },
-                        {
-                        name: 'Prodotti',
-                        url: '#'
-                        },
-                        {
-                        name: 'Chi siamo',
-                        url: '#'
-                        },
-                        {
-                        name: 'Contatti',
-                        url: '#'
-                        }
-                    ],
-                    Pastificio: [
-                        {
-                        name: 'home',
-                        url: '#'
-                        },
-                        {
-                        name: 'Prodotti',
-                        url: '#'
-                        },
-                        {
-                        name: 'Chi siamo',
-                        url: '#'
-                        },
-                        {
-                        name: 'Contatti',
-                        url: '#'
-                        }
-                    ],
-                },
+                menu: footerMenu
             }
         }
     }
