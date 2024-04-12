@@ -13,7 +13,8 @@ import FooterComponents from './components/FooterComponents.vue';
     components: {
       HeaderComponents,
       MainComponents,
-      FooterComponents
+      FooterComponents,
+      
     }
   }
 </script>
