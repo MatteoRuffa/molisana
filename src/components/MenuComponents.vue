@@ -12,7 +12,12 @@
 <script>
     export default {
         name: 'MenuComponents',
-        props: ['title', 'items']   //QUELLO SOPRA FUNZIONA SOLO SE QUALCUNO GLI PASSA TITLE E ITEMS
+        props: ['title', 'items'],   //QUELLO SOPRA FUNZIONA SOLO SE QUALCUNO GLI PASSA TITLE E ITEMS
+        methods: {
+            changeMenu() {
+                console.log('ciao');
+            }
+        }
     }
 </script>
 
